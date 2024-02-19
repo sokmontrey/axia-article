@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+
+const ideas = await Astro.glob('@/pages/ideas/**/index.mdx');
+---
+
+<BaseLayout title="Ideas">
+  {ideas.map((idea) =>
+    <a href={idea.url}>
+      <h2>{idea.frontmatter.title}</h2>
+      <p>{idea.frontmatter.description}</p>
+      <hr />
+    </a>
+  )}
+</BaseLayout>
