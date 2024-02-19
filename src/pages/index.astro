@@ -5,11 +5,19 @@ const ideas = await Astro.glob('@/pages/ideas/**/index.mdx');
 ---
 
 <BaseLayout title="Ideas">
-  {ideas.map((idea) =>
-    <a href={idea.url}>
-      <h2>{idea.frontmatter.title}</h2>
-      <p>{idea.frontmatter.description}</p>
-      <hr />
-    </a>
-  )}
+  <header class="p-5">
+    <h1 class="pb-2">
+      &Alpha;&Xi;&Iota;&Alpha;
+    </h1>
+  </header>
+
+  <main class="pl-5">
+    {ideas.map((idea) =>
+      <a href={idea.url}>
+        <h2>{idea.frontmatter.title}</h2>
+        <p>{idea.frontmatter.description}</p>
+        <hr class="my-5 opacity-20" />
+      </a>
+    )}
+  </main>
 </BaseLayout>

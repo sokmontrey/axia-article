@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap')
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #202020;
+  --nt-color: #DDDDDD;
+  --pm-color: #3377FF;
+
+  --serif-font: "Lora", serif;
+  --sans-font: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-color);
+  color: var(--nt-color);
+
+  font-family: var(--sans-font);
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--serif-font);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+a:hover {
+  color: var(--pm-color);
+}
