@@ -1,0 +1,28 @@
+---
+const { href } = Astro.props;
+---
+
+<a href={href} target="_blank" >
+  <slot />
+</a>
+
+<iframe 
+  class="hidden md:block fixed top-[50vh] -translate-y-1/2 left-[40vw] z-50 inline-block border border-1 border-gray-500 rounded-xl w-[30%] h-[80vh] "
+  src={href} 
+  frameborder="0" 
+  >
+</iframe>
+
+<style>
+  iframe {
+    display: none;
+    opacity: 0;
+  }
+
+  a:hover + iframe,
+  iframe:hover {
+    display: block;
+    animation: fadeIn 0.5s;
+    opacity: 1;
+  }
+</style>
