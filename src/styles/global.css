@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap')
-
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap')
-
-@tailwind base;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap")
+  @import
+  url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap")
+  @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -10,6 +9,8 @@
   --bg-color: #141a23;
   --nt-color: #eeeeee;
   --pm-color: #4080ff;
+  --ft-color: #1f2836;
+  --ft2-color: #2e3a4d;
 
   --serif-font: "Lora", serif;
   --sans-font: "Inter", sans-serif;
@@ -48,7 +49,12 @@ html {
   font-family: var(--sans-font);
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--serif-font);
 }
 
@@ -73,11 +79,34 @@ a:hover {
   text-decoration: underline;
 }
 
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1rem 0rem;
+}
+
+th {
+  text-align: left;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--ft2-color);
+  background-color: var(--ft-color);
+}
+
+td {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--ft2-color);
+}
+
+tr {
+  border: 1px solid var(--ft2-color);
+}
+
+

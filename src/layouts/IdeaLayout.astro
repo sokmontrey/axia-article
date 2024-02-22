@@ -4,7 +4,7 @@ import Logo from '@/components/Logo.astro'
 
 const { title, description } = Astro.props.frontmatter;
 
-const body_class = "px-5 w-full md:px-10 md:w-[80%] md:mx-auto lg:w-[55%] lg:mx-0 lg:px-20 xl:w-[45%] 2xl:w-[40%] xl:py-5 xl:px-[6rem] ";
+const body_class = "px-5 w-full md:px-10 md:w-[80%] md:mx-auto lg:w-[55%] lg:mx-0 lg:px-20 xl:w-[45%] 2xl:w-[37%] xl:py-5 xl:px-[6rem] ";
 ---
 
 <BaseLayout title={title}>
@@ -16,7 +16,7 @@ const body_class = "px-5 w-full md:px-10 md:w-[80%] md:mx-auto lg:w-[55%] lg:mx-
   </nav>
 
   <header class={body_class}>
-    <h1 class="pm-color lg:text-[3rem]">{title}</h1>
+    <h1 class="pm-color font-bold lg:text-[3rem]">{title}</h1>
     <p>{description}</p>
     <hr class="mt-5 border-dashed opacity-30"/>
   </header>
