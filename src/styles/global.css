@@ -49,6 +49,10 @@ html {
   font-family: var(--sans-font);
 }
 
+code {
+  font-family: var(--mono-font);
+}
+
 h1,
 h2,
 h3,
