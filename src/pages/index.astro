@@ -2,7 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Logo from '@/components/Logo.astro';
 
-const ideas = await Astro.glob('@/pages/ideas/**/index.mdx');
+const ideas = await Astro.glob('@/pages/ideas/**/*.mdx');
 ---
 
 <BaseLayout title="Ideas">

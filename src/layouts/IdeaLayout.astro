@@ -9,19 +9,32 @@ const body_class = "px-5 w-full md:px-10 md:w-[80%] md:mx-auto lg:w-[55%] lg:mx-
 
 <BaseLayout title={title}>
   <nav class="md:px-8 md:pt-5">
-    <a href="/" class="p-5 flex items-center nt-color opacity-70 hover:opacity-100 hover:text-[var(--pmc-color)] ">
+    <button id="go-back-button" 
+      class="p-5 flex items-center nt-color opacity-70 hover:opacity-100 hover:text-[var(--pmc-color)] ">
       <i class="fa-solid fa-chevron-left pr-2 "></i>
       <Logo />
-    </a>
+    </button>
   </nav>
 
   <header class={body_class}>
     <h1 class="pm-color font-bold lg:text-[3rem]">{title}</h1>
     <p>{description}</p>
-    <hr class="mt-5 border-dashed opacity-30"/>
+    <hr class="mb-0" />
   </header>
 
-  <main class={body_class + " py-5"}>
+  <main class={body_class}>
     <slot />
   </main>
 </BaseLayout>
+
+
+<script>
+  function goBack() {
+    if (window.history && window.history.back) {
+      window.history.back();
+    } else {
+      window.location.href = '/';
+    }
+  }
+  document.getElementById('go-back-button').addEventListener('click', goBack);
+</script>

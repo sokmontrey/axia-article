@@ -9,7 +9,9 @@
   --bg-color: #141a23;
   --nt-color: #eeeeee;
   --pm-color: #4080ff;
-  --ft-color: #1f2836;
+  --sd-color: #40ff8c;
+  --sd2-color: #40ff8c22;
+  --ft-color: #1b1e28;
   --ft2-color: #2e3a4d;
 
   --serif-font: "Lora", serif;
@@ -60,6 +62,7 @@ h4,
 h5,
 h6 {
   font-family: var(--serif-font);
+  color: var(--pm-color);
 }
 
 h1 {
@@ -92,6 +95,32 @@ a:hover {
   }
 }
 
+pre {
+  display: grid;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+:not(pre) > code {
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  background-color: #1b1e28;
+  color: #5DE4C7;
+  font-size: 1rem;
+}
+
+pre > code .highlighted {
+  background-color: var(--sd2-color);
+  border-left: 2px solid var(--sd-color);
+  padding: 0.3rem 1rem;
+  transform: translateX(-1rem);
+}
+
+hr {
+  border: 1px dashed var(--ft2-color);
+  margin: 2rem 0rem;
+}
+
 table {
   border-collapse: collapse;
   margin: 1rem 0rem;
@@ -112,5 +141,3 @@ td {
 tr {
   border: 1px solid var(--ft2-color);
 }
-
-
