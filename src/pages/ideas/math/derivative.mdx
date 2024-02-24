@@ -4,16 +4,64 @@ title: "Derivatives"
 description: "To see if something is changing, we need at least two data points to see the difference, right?"
 ---
 
+# Rate of change
+
 Consider the [function](/ideas/math/function) `f(x) = 2x`. Let's plug in some values of `x` and see what we get.
 
 | $x$  | $f(x)$ | 
-|:--| :-: |
+|:--   | :-:    |
 | 1    | 2      | 
 | 2    | 4      | 
 | 3    | 6      | 
 | 4    | 8      | 
 | 5    | 10     | 
 
-Everytime `x` is increase by 1, the output go up by 2. This is true anywhere on this specific function.
+When `x` is increase by 1, the output go up by 2. This is true anywhere on this specific function.
 
 ![2x function](/plots/linear_2x.png)
+
+Let's us describe this change mathematically. Rate of change can be written as change in `f(x)` over change in `x`:
+
+$$
+\frac{\Delta f}{\Delta x}
+$$
+
+The $\Delta$ symbol is the Greek letter delta, which is usually used to indicate changes. Let's pick two points of x, say `x=2` and `x=5`. The corresponding `f(x)` values are `f(2) = 4` and `f(5) = 10`. The rate of change will be:
+
+$$
+{\color{gray} \frac{\Delta f}{\Delta x} = } \frac{10 - 4}{5 - 2} = {\textcolor{#40ff8c} 2}
+$$
+
+Any other two points will give the same rate of change (as long as they are not the same point). This is because `f(x) = 2x` is a linear function. 
+
+---
+
+# Two points is not one point
+
+Now consider a different function, `f(x) = x^2`. 
+
+![x square](/plots/x_square.png)
+
+Different set of poitns might give different rate of change. For example:
+
+1. x=1 and x=2
+
+$$
+\frac{f(2) - f(1)}{2 - 1} = \frac{2^2 - 1^2}{2 - 1} = 3
+$$
+
+2. x=1 and x=3
+
+$$
+\frac{f(3) - f(1)}{3 - 1} = \frac{3^2 - 1^2}{3 - 1} = 4
+$$
+
+This formula only works when we want to find the rate of change between **two points**, `x1 to x2` (average rate of change between x1 and x2). But it is inaccurate to find the rate of change at a **specific** point on any given, non-linear, function.
+
+$$
+\frac{\Delta f}{\Delta x} = \frac{f(x_2) - f(x_1)}{x_2 - x_1}
+$$
+
+---
+
+# Derivative

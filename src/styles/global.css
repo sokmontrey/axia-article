@@ -14,6 +14,7 @@
   --sd2-color: #40ff8c22;
   --ft-color: #1b1e28;
   --ft2-color: #2e3a4d;
+  --ac-color: #ff5e5e;
 
   --serif-font: "Lora", serif;
   --sans-font: "Inter", sans-serif;
@@ -22,6 +23,10 @@
 
 .pm-color {
   color: var(--pm-color);
+}
+
+.sd-color {
+  color: var(--sd-color);
 }
 
 .bg-color {
@@ -87,6 +92,20 @@ a:hover {
   text-decoration: underline;
 }
 
+li {
+  font-size: 1.2rem;
+}
+
+ol > li {
+  margin: 1rem 3rem;
+  list-style-type: decimal;
+}
+
+ol > li::marker {
+  color: var(--nt-color);
+  font-family: var(--mono-font);
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -141,4 +160,8 @@ td {
 
 tr {
   border: 1px solid var(--ft2-color);
+}
+
+.katex {
+  width: 95%;
 }
