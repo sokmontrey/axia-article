@@ -4,7 +4,6 @@ import tailwind from "@astrojs/tailwind";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
-import svelte from "@astrojs/svelte";
 const pretty_opts = {
   theme: "poimandres",
   onVisitLine(node) {
@@ -27,7 +26,7 @@ const katex_opts = {};
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx(), tailwind(), svelte()],
+  integrations: [mdx(), tailwind()],
   markdown: {
     syntaxHighlight: false,
     rehypePlugins: [[rehypePrettyCode, pretty_opts], [rehypeKatex, katex_opts]],
