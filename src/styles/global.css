@@ -165,3 +165,7 @@ tr {
 .katex {
   width: 95%;
 }
+
+img {
+  margin: 0rem auto;
+}
