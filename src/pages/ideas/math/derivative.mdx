@@ -20,7 +20,7 @@ When `x` is increase by 1, the output go up by 2. This is true anywhere on this 
 
 ![2x function](/plots/linear_2x.png)
 
-Let's us describe this change mathematically. Rate of change can be written as change in `f(x)` over change in `x`:
+Let's describe this change mathematically. Rate of change can be written as change in `f(x)` over change in `x`:
 
 $$
 \frac{\Delta f}{\Delta x}
@@ -42,7 +42,7 @@ Now consider a different function, `f(x) = x^2`.
 
 ![x square](/plots/x_square.png)
 
-Different set of poitns might give different rate of change. For example:
+Different set of points might give different rate of change. For example:
 
 1. x=1 and x=2
 
@@ -62,6 +62,53 @@ $$
 \frac{\Delta f}{\Delta x} = \frac{f(x_2) - f(x_1)}{x_2 - x_1}
 $$
 
+For instance, if I want to find the the rate of change at exactly **`x=1`**, no more or less. The **instantaneous** rate of change (exact rate of change at x=1) is 2 (check [Deriving rules](#section-4) section). But how will we use the previous formula with only one $x$?
+
+I hope that this is enough to convince you that we need a different way to find the rate of change.
+
 ---
 
-# Derivative
+# Not too far
+
+We still use a second point for the formula, _but what if it is is very close to the first one?_. Let's rewrite the formula. Instead of using another point, $x_2$, we take the input, $x$, and add a very small number to it. Call this small number $\Delta x$. Now, here is how we will find the rate of change:
+
+$$
+\frac{f(x + \Delta x) - f(x)}{\Delta x}
+$$
+
+Just to explain the algebra, we use $x + \Delta x$ instead of $x_2$. $\Delta x$ is some small number, indicating a small change in $x$, bringing second point closer to the first one. Substract this by $f(x)$ gives us the change in output. The change in input is $x + \Delta x - x$, which is just $\Delta x$.
+
+---
+
+# Closer and Closer
+
+In Calculus, we can use [limit](/ideas/math/limit) to make $\Delta x$ as close to zero as possible (extremely small). Here is the previous expression with limit:
+
+$$
+\lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}
+$$
+
+This is essentially the definition of derivative. Derivative of a function $f(x)$ with respect to $x$ is (replace $\Delta x$ with $h$):
+
+<span class="sd-color text-xl p-2">
+$$
+\frac{\mathrm{d}f}{\mathrm{d}x} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+$$
+</span>
+
+```{note}
+Closer and Closer illustration
+```
+
+> <span class="title">Note</span>
+> You might encounter a different notation for derivative, such as $f'(x)$. They all mean the same thing. But I prefer the Leibniz notation, $\frac{\mathrm{d}f}{\mathrm{d}x}$, because it is more intuitive.
+
+---
+
+# Deriving rules
+
+Using the definition of derivative every time we solve a problem is not practical.
+
+## Specific functions
+
+## Combination of functions

@@ -142,7 +142,7 @@ pre {
   padding: 0.2rem 0.5rem;
   border-radius: 0.3rem;
   background-color: #1b1e28;
-  color: #5de4c7;
+  /* color: #5de4c7; */
   font-size: 1rem;
 }
 
@@ -185,4 +185,27 @@ tr {
 
 img {
   margin: 0rem auto;
+}
+
+em {
+  color: var(--sd-color);
+}
+
+blockquote {
+  padding: 0.2rem 1.2rem;
+  border-left: 2px solid var(--sd-color);
+  background-color: var(--ft-color);
+  margin: 2rem 0rem;
+}
+
+blockquote span.title {
+  font-size: 1.2rem;
+  color: var(--sd-color);
+  font-family: var(--mono-font);
+  display: block;
+}
+
+blockquote span.title::before {
+  content: "!";
+  padding-right: 0.5rem;
 }
