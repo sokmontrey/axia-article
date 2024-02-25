@@ -1,22 +1,24 @@
 ---
 import BaseLayout from './BaseLayout.astro'
 import Logo from '@/components/Logo.astro'
+import SectionBar from '@/components/SectionBar.astro'
 
 const { title, description } = Astro.props.frontmatter;
 
-const body_class = "px-5 w-full md:px-10 md:w-[80%] md:mx-auto lg:w-[55%] lg:mx-0 lg:px-20 xl:w-[50%] 2xl:w-[45%] xl:py-5 xl:px-[6rem] ";
+const body_class = "px-5 w-full md:px-10 md:w-[80%] md:mx-auto lg:w-[55%] lg:mx-0 lg:px-20 xl:w-[50%] 2xl:w-[50%] xl:py-5 xl:px-[6rem] ";
 ---
 
 <BaseLayout title={title}>
   <nav class="md:px-8 md:pt-5">
     <button id="go-back-button" 
-      class="p-5 flex items-center nt-color opacity-70 hover:opacity-100 hover:text-[var(--pmc-color)] ">
+      class="p-5 py-3 flex items-center nt-color opacity-70 hover:opacity-100 hover:text-[var(--pmc-color)] ">
       <i class="fa-solid fa-chevron-left pr-2 "></i>
       <Logo />
     </button>
   </nav>
 
   <header class={body_class}>
+    <SectionBar />
     <h1 class="pm-color font-bold lg:text-[3rem]">{title}</h1>
     <p>{description}</p>
     <hr class="mb-0" />
@@ -26,7 +28,6 @@ const body_class = "px-5 w-full md:px-10 md:w-[80%] md:mx-auto lg:w-[55%] lg:mx-
     <slot />
   </main>
 </BaseLayout>
-
 
 <script>
   function goBack() {

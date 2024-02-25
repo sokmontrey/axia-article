@@ -1,0 +1,29 @@
+<ul id="section-container" 
+  class="fixed mono-font hidden lg:block text-right right-16"
+>
+</ul>
+
+<script>
+  const all_h1 = Array.from(document.querySelectorAll('h1'))
+    .slice(1);
+
+  all_h1.forEach((h1, i) => {
+    h1.id = `section-${i}`;
+    const li = document.createElement('li');
+    li.className = 'pb-1 list-none';
+    li.innerHTML = `<button class="section-button nt-color opacity-30 text-base hover:opacity-100 ">
+      ${h1.innerHTML}
+    </button>`;
+    document.getElementById('section-container').appendChild(li);
+  });
+
+  const section_buttons = document.querySelectorAll('.section-button');
+
+  section_buttons.forEach((button, i) => {
+    button.addEventListener('click', () => {
+      const section = document.getElementById(`section-${i}`);
+      section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  });
+</script>
+

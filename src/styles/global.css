@@ -33,6 +33,14 @@
   color: var(--bg-color);
 }
 
+.ft-color {
+  color: var(--ft-color);
+}
+
+.ft2-color {
+  color: var(--ft2-color);
+}
+
 .nt-color {
   color: var(--nt-color);
 }
@@ -86,6 +94,7 @@ p {
 
 a {
   color: var(--pm-color);
+  transition: all 0.1s ease-in-out;
 }
 
 a:hover {
@@ -104,6 +113,14 @@ ol > li {
 ol > li::marker {
   color: var(--nt-color);
   font-family: var(--mono-font);
+}
+
+ul {
+  direction: rtl;
+}
+
+ul > li {
+  list-style-type: circle;
 }
 
 @keyframes fadeIn {
