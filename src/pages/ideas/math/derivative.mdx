@@ -70,7 +70,7 @@ I hope that this is enough to convince you that we need a different way to find 
 
 # Not too far
 
-We still use a second point for the formula, _but what if it is is very close to the first one?_. Let's rewrite the formula. Instead of using another point, $x_2$, we take the input, $x$, and add a very small number to it. Call this small number $\Delta x$. Now, here is how we will find the rate of change:
+We still use a second point for the formula, _but what if it is very close to the first one?_ **Not on top, very close**. Let's rewrite the formula. Instead of using another point, $x_2$, we take the input, $x$, and add a very small number to it. Call this small number $\Delta x$. Now, here is how we will find the rate of change:
 
 $$
 \frac{f(x + \Delta x) - f(x)}{\Delta x}
@@ -96,12 +96,38 @@ $$
 $$
 </span>
 
-```{note}
-Closer and Closer illustration
-```
-
 > <span class="title">Note</span>
 > You might encounter a different notation for derivative, such as $f'(x)$. They all mean the same thing. But I prefer the Leibniz notation, $\frac{\mathrm{d}f}{\mathrm{d}x}$, because it is more intuitive.
+
+Let's use this to find the derivative of $f(x) = x^2$. Plug $x^2$ in the formula we get:
+
+$$
+\frac{\mathrm{d}f}{\mathrm{d}x} = \lim_{h \to 0} \frac{(x + h)^2 - x^2}{h}
+$$
+
+Pluging in `h=0` will not do us any good since it make the whole thing $\frac{0}{0}$. We keep `x` and `h` as it is for now. Expand the term $(x + h)^2$ we get $x^2 + 2xh + h^2$ ([binomial expansion](/ideas/math/binomial-expansion)). The numerator becomes:
+
+$$
+\cancel{x^2} + 2xh + h^2 \cancel{- x^2} = 2xh + h^2 \\
+{} \\
+\Rightarrow \lim_{h \to 0} \frac{\cancel{h}(2x + h)}{\cancel{h}}  \\
+$$
+
+Now, we can plug in `h=0` and get $2x$. So the derivative of $f(x) = x^2$ with respect to $x$ is:
+
+$$
+\frac{\mathrm{d}f}{\mathrm{d}x} = 2x
+$$
+
+Now, we can use this to find the rate of change at any point on the function $f(x) = x^2$. For example, at $x=1$:
+
+$$
+\frac{\mathrm{d}f}{\mathrm{d}x} = 2(1) = 2
+$$
+
+![x square derivative](/plots/x_square_derivative.gif)
+
+Remember, h is very small, but not zero. This mean that the two points are very close to each other, but not on top of each other.
 
 ---
 
