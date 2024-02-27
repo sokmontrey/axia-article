@@ -116,7 +116,12 @@ ol > li::marker {
 }
 
 ul {
+  margin-left: 2rem;
+}
+
+ul.section-bar {
   direction: rtl;
+  margin-left: 0rem;
 }
 
 ul > li {

@@ -1,0 +1,25 @@
+---
+layout: "@/layouts/IdeaLayout.astro"
+title: "Derivative Rules"
+description: "All you need to know to solve any derivative problems"
+---
+
+# The tedious way 
+
+In the [introduction to derivative](/ideas/math/derivative), we see the **limit definition of derivative** which is in the following form:
+
+$$
+\frac{\mathrm{d}f}{\mathrm{d}x} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+$$
+
+We already figured out the derivative of the function $f(x) = x^2$. Let's work on a more general form of this function, $x^n$ (`n` is any real number).
+
+Plug $x^n$ into the formula we get:
+
+$$
+\frac{\mathrm{d}f}{\mathrm{d}x} = \lim_{h \to 0} \frac{(x + h)^n - x^n}{h}
+$$
+
+If you are from [limit](/ideas/math/limit), you know that plug in `h=0` will not work ($\frac{0}{0}$) because `h` is approaching 0, not equal to 0. So we will have to cancel `h` out of the expression somehow.
+
+The term $(x + h)^n$ can be expand using the binomial theorem:
