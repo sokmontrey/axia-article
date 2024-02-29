@@ -50,16 +50,92 @@ What we just did is deriving the derivative rule for power function. This rule c
 
 # Elementary function rules
 
-To save us the trouble, here are derivative rules some of the most important elementary functions.
+To save us the trouble, here are derivative rules for some of the most important elementary functions.
 
-1. Power rule
+1. Power function
 $$
 \frac{\mathrm{d}}{\mathrm{dx}} \; x^n = nx^{n-1}
 $$
 
+2. Trig functions
+$$
+\frac{\mathrm{d}}{\mathrm{dx}} \; sin(x) = cos(x)
+$$
+$$
+\frac{\mathrm{d}}{\mathrm{dx}} \; cos(x) = -sin(x)
+$$
+
+3. Expotential function
+
+> `x` to the power of `n` is different from `n` to the power of `x`. One is the power function and the other is an exponential function respectively. $e^x$ is a special case of the exponential function. Its derivative is itself.
+$$
+\frac{\mathrm{d}}{\mathrm{dx}} \; e^x = e^x
+$$
+
+$$
+\frac{\mathrm{d}}{\mathrm{dx}} a^x = \texttt{Can be derived from } e^x \texttt{(your homework)}
+$$
+
+4. Logrithmetic functions 
+$$
+\frac{\mathrm{d}}{\mathrm{dx}} \ln(x) = \frac{1}{x}
+$$
+
+These rules, along with [combinational rules](#section-3), should be able to find the derivative of many function. They are very useful.
+
 ---
 
 # Quick examples
+
+Before we get to the combination of function rule, let's work on a few examples to see how powerful these rules already are.
+
+Find the derivative of the following functions (with respect to x):
+
+1. $f(x) = \sqrt{x}$
+
+$\sqrt{x}$ can be written as $x^{1/2}$. And according to the power rule:
+
+$$
+\begin{align*}
+\frac{\mathrm{df}}{\mathrm{d}x} &= \frac{1}{2} \cdot x^{(1/2) - 1} \\
+& = \frac{1}{2} \cdot x^{-1/2} \\
+& = \frac{1}{2 \sqrt{x}}
+\end{align*}
+$$
+
+2. $g(x) = \frac{1}{x}$
+
+$$
+\begin{align*}
+\frac{1}{x} & = x^{-1} \\
+{} \\
+\Rightarrow \frac{\mathrm{dg}}{\mathrm{d}x} & = -1\cdot x^{-2} \\
+& = - \frac{1}{x^2}
+\end{align*}
+$$
+
+3. $h(x) = 20$
+
+20 is a constant, _a number without the variable that the derivative is respect to_. Derivative of a constant is 0. Let's derive that. 
+
+We want to make the number 20 into the form of $x^n$. We can re-write it as $20 \cdot x^0$ (anything to the power of 0 is 1). And according to power rule:
+
+$$
+\begin{align*}
+\frac{\mathrm{dg}}{\mathrm{d}x} & = 20 \cdot 0 \cdot x^{0-1} \\
+& = 0
+\end{align*}
+$$
+
+$$
+\begin{align*}
+\end{align*}
+$$
+
+{/*
+4. $w(x) = a^x$
+This is supposed to be your exercise. 
+*/}
 
 ---
 
