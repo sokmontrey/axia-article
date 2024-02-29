@@ -16,7 +16,7 @@ Consider the [function](/ideas/math/function) `f(x) = 2x`. Let's plug in some va
 | 4    | 8      | 
 | 5    | 10     | 
 
-When `x` is increase by 1, the output go up by 2. This is true anywhere on this specific function.
+When `x` go up by 1, the output go up by 2. This is true anywhere on **this specific function**.
 
 ![2x function](/plots/linear_2x.png)
 
@@ -62,21 +62,23 @@ $$
 \frac{\Delta f}{\Delta x} = \frac{f(x_2) - f(x_1)}{x_2 - x_1}
 $$
 
-For instance, if I want to find the the rate of change at exactly **`x=1`**, no more or less. The **instantaneous** rate of change (exact rate of change at x=1) is 2 (check [Deriving rules](#section-4) section). But how will we use the previous formula with only one $x$?
+For instance, how can I find the the rate of change at **exactly** `x=1`?. The **instantaneous** (exact) rate of change is `2` (check [Closer and Closer](#section-3) section for details). 
 
-I hope that this is enough to convince you that we need a different way to find the rate of change.
+In physic, your car speed at `a` could be different from your overall speed from `a` to `b`, especially in a real-life. check [Additional Info](#section-4) for more applications. Our problem is that the formula need two points, but two points changes the meaning of "instantaneous rate of change". So how can we find the rate of change with only one point?
+
+I hope this is enough to convince you that we need a different way to find the rate of change.
 
 ---
 
 # Not too far
 
-We still use a second point for the formula, _but what if it is very close to the first one?_ **Not on top, very close**. Let's rewrite the formula. Instead of using another point, $x_2$, we take the input, $x$, and add a very small number to it. Call this small number $\Delta x$. Now, here is how we will find the rate of change:
+We still use a second point for the formula, _but what if it is very close to the first one?_ **Not on top, but very close**. Let's rewrite the formula. Instead of using another point, $x_2$, we take the input, $x$, and add a very small number to it. Call this small number $\Delta x$. Now, here is how we find the rate of change:
 
 $$
 \frac{f(x + \Delta x) - f(x)}{\Delta x}
 $$
 
-Just to explain the algebra, we use $x + \Delta x$ instead of $x_2$. $\Delta x$ is some small number, indicating a small change in $x$, bringing second point closer to the first one. Substract this by $f(x)$ gives us the change in output. The change in input is $x + \Delta x - x$, which is just $\Delta x$.
+We use $x + \Delta x$ instead of $x_2$. $\Delta x$ need to be a small number, indicating a small change in $x$, bringing the second point closer to the first one. Substract this by $f(x)$ gives us the change in output. The change in input is $\cancel{x} + \Delta x - \cancel{x}$, which is just $\Delta x$.
 
 ---
 
@@ -113,7 +115,7 @@ $$
 \Rightarrow \lim_{h \to 0} \frac{\cancel{h}(2x + h)}{\cancel{h}}  \\
 $$
 
-Now, we can plug in `h=0` and get $2x$. So the derivative of $f(x) = x^2$ with respect to $x$ is:
+We can plug in `h=0` and get $2x$. So the derivative of $f(x) = x^2$ with respect to $x$ is:
 
 $$
 \frac{\mathrm{d}f}{\mathrm{d}x} = 2x
@@ -127,7 +129,10 @@ $$
 
 ![x square derivative](/plots/x_square_derivative.gif)
 
-Remember, h is very small, but not zero. This mean that the two points are very close to each other, but not on top of each other.
+Remember, `h` is very small, but not zero. This mean that the two points are very close to each other, but not on top of one another.
 
-> <span class="title">Additional Info</span>
-> - [Derivative rules](/ideas/math/derivative-rules) are built on top of the limit definition of derivative in order to find derivative of functions more easily.
+# Additional Info
+
+- [Derivative rules](/ideas/math/derivative-rules) are built on top of the limit definition of derivative in order to find derivative of functions more easily.
+
+- [Derivative in Machine Learning](/ideas/math/derivative-in-machine-learning)
