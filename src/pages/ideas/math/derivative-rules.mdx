@@ -23,3 +23,25 @@ $$
 If you are from [limit](/ideas/math/limit), you know that plug in `h=0` will not work ($\frac{0}{0}$) because `h` is approaching 0, not equal to 0. So we will have to cancel `h` out of the expression somehow.
 
 The term $(x + h)^n$ can be expand using the binomial theorem:
+
+$$
+\dots \frac{{\color{cyan}\cancel{x^n} + nx^{n-1}h + \dots + h^n } - \cancel{x^n} }{h}
+$$
+
+The plus and minus $x^n$ cancel out. The remaining terms have at least one `h`. If we factor out `h` from the numerator, we should get:
+
+$$
+\dots \frac{\cancel{h} (nx^{n-1} {\color{cyan}+ \dots})}{\cancel{h}} = \lim_{h \to 0} nx^{n-1} {\color{cyan}+ \dots}
+$$
+
+The numerator and denominator `h` cancel out. The light-blue dots (...) term all contain at least one `h`. We do not care about them because $\lim_{h \to 0}$ make them equal to 0.
+
+At what we have left is:
+
+<span class="sd-color text-xl p-2">
+$$
+\frac{\mathrm{d}x^n}{\mathrm{d}x} = n\cdot x^{n-1}
+$$
+</span>
+
+What we just did is deriving the derivative rule for power function. This rule can solve any function in the form of (or can be turn into) $x^n$.
