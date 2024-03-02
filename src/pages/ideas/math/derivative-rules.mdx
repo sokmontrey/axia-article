@@ -118,7 +118,7 @@ $$
 
 20 is a constant, _a number without the variable that the derivative is respect to_. Derivative of a constant is 0. Let's derive that. 
 
-We want to make the number 20 into the form of $x^n$. We can re-write it as $20 \cdot x^0$ (anything to the power of 0 is 1). And according to power rule:
+We want to make the number 20 to be in the form $x^n$. We can re-write it as $20 \cdot x^0$ (anything to the power of 0 is 1). And according to power rule:
 
 $$
 \begin{align*}
@@ -132,11 +132,45 @@ $$
 \end{align*}
 $$
 
-{/*
-4. $w(x) = a^x$
-This is supposed to be your exercise. 
-*/}
-
 ---
 
 # Combination of function rules
+
+## Example
+$w(x) = a^x$
+
+This is supposed to be your exercise, so give it a try before you continue. All that we know so far is that the derivative of $e^x$ is $e^x$ itself. 
+
+From one of the log rule, we know that:
+
+$$
+a^{\log_ab} = b
+$$
+
+or 
+
+$$
+x = b^{\log_nx}
+$$
+
+This mean that:
+
+$$
+a^x = e^{\ln \; a^x}
+$$
+
+We use $a^x$ instead of `x` and $e$ instead of `b`. Now, we are almost there. 
+
+Another log rule:
+$$
+\log_b{a^n} = n \log_ba
+$$
+
+So
+
+$$
+e^{\ln \; a^x} = e^{x \; \ln \; a}
+$$
+
+$\ln a$ is just a constant
+
